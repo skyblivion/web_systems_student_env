@@ -1,7 +1,7 @@
 <?php
 include_once 'Router.php';
 function user_id(){
- echo "abvg1";
+ echo "&*#@%*! user";
 }
 function user_add(){
  echo "abvgd";

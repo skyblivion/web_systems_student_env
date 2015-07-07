@@ -6,7 +6,7 @@ function home(){
 $smarty = getSmarty();
 
 
-return $smarty->fetch("home.routes.tpl");
+return $smarty->fetch("home.tpl");
 
 }
 

@@ -2,6 +2,7 @@
 include_once 'home.routes.php';
 include_once 'user.routes.php';
 include_once 'reg.routes.php';
+include_once 'login.routes.php';
 
 class Router {
 
@@ -29,20 +30,20 @@ class Router {
     if (!in_array($method, array('GET', 'POST'))) {
       new Exception("Request method should be GET or POST"); 
     }
-
+//var_dump(self::$routes);
     // Выполнение роутинга
     // Используем роуты $routes['GET'] или $routes['POST']  в зависимости от метода HTTP.
     $active_routes = self::$routes[$method];
    // var_dump(self::$routes);
     // Для всех роутов 
     foreach ($active_routes as $pattern => $callback) {
+      //var_dump($pattern);
+      
       // Если REQUEST_URI соответствует шаблону - вызываем функцию
       if (preg_match_all("/$pattern/", $uri, $matches)) {
         // вызываем callback
-        //var_dump($matches);
         return call_user_func_array($callback,$matches);
         // выходим из цикла
-        break;
       }
       $matches = array();
     }

@@ -6,8 +6,8 @@
  </head>
  <body>
  {$content}
- <p> все норм</p>
- <form class="formreg" action="handler.php" method="post" enctype="multipart/form-data"></form>
-<form class="formreg" action="reg_add.php" method="post" enctype="multipart/form-data"></form>
+ <p> </p>
+ <form> </form>
+
  </body>
 </html>
